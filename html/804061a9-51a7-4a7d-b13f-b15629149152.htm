@@ -1,0 +1,56 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"> </script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Welcome to the Ooogles.Net</title><meta name="Language" content="en-us" /><meta name="System.Keywords" content="Welcome" /><meta name="Microsoft.Help.Id" content="804061a9-51a7-4a7d-b13f-b15629149152" /><meta name="Description" content="Ooogles is a ultra-thin object oriented wrapper around OpenGL-ES 2.0 with near-zero impact on performance. It works for iOS and Android, but can also be used to create OpenGL-ES applications for Windows using ANGLEhttps://github.com/Microsoft/angle." /><meta name="Microsoft.Help.ContentType" content="Concepts" /><meta name="BrandingAware" content="true" /><link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" /><script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"></script><script type="text/javascript" src="../scripts/branding-Website.js"></script><script type="text/javascript" src="../scripts/clipboard.min.js"></script></head><body onload="OnLoad('cs')"><input type="hidden" id="userDataCache" class="userDataStyle" /><div class="pageHeader" id="PageHeader">Ooogles.Net - Object Oriented OpenGL-ES 2.0<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div><div class="pageBody"><div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="804061a9-51a7-4a7d-b13f-b15629149152.htm" title="Ooogles.Net - Object Oriented OpenGL-ES 2.0" tocid="roottoc">Ooogles.Net - Object Oriented OpenGL-ES 2.0</a></div><div class="toclevel1 current" data-toclevel="1"><a data-tochassubtree="false" href="804061a9-51a7-4a7d-b13f-b15629149152.htm" title="Welcome to the Ooogles.Net" tocid="804061a9-51a7-4a7d-b13f-b15629149152">Welcome to the Ooogles.Net</a></div><div class="toclevel1" data-toclevel="1"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="d2f0578f-0e79-4cd0-840b-8fa1715f8fda.htm" title="Version History" tocid="d2f0578f-0e79-4cd0-840b-8fa1715f8fda">Version History</a></div><div class="toclevel1" data-toclevel="1"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="6231ce6b-3d6e-a114-6019-2b501d581ed1.htm" title="Ooogles" tocid="6231ce6b-3d6e-a114-6019-2b501d581ed1">Ooogles</a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize" /><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize" /></div></div><div class="topicContent" id="TopicContent"><table class="titleTable"><tr><td class="logoColumn"><img src="../icons/Help.png" /></td><td class="titleColumn"><h1>Welcome to the Ooogles.Net</h1></td></tr></table><span class="introStyle"></span> <div class="introduction"><p>
+        Ooogles is a ultra-thin object oriented wrapper around OpenGL-ES 2.0 with near-zero impact on performance.
+        It works for iOS and Android, but can also be used to create OpenGL-ES applications for Windows using 
+        <a href="https://github.com/Microsoft/angle" target="_blank">ANGLE</a>.
+      </p><p>
+        This wrapper is still pretty low-level.
+        It is not a "rendering engine" or high-level framework, so you still need OpenGL knowledge.</p><p>
+        The main goals of Ooogles are to make it easier and less error-prone to use OpenGL-ES, 
+        offering error reporting in DEBUG builds and a better IntelliSense experience in the Visual Studio IDE.
+      </p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID0RB')" onkeypress="SectionExpandCollapse_CheckKey('ID0RB', event)" tabindex="0"><img id="ID0RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Features</span></div><div id="ID0RBSection" class="collapsibleSection"><p>Ooogles has the following features:</p><ul><li><p>
+              Encapsulates OpenGL "objects" into C# classes for a better organized and easier to use interface to OpenGL.
+            </p></li><li><p>
+              Provides type-safe access to most OpenGL constructs.
+            </p></li><li><p>
+              Is based on <a href="https://opentk.github.io/" target="_blank">OpenTK</a> (for now),
+              but provides a uniform API for iOS, Android and Windows, taking care of platform differences in the OpenTK API.
+            </p></li><li><p>
+              The wrapper is very thin. Most methods are inlined and wrap just a single OpenGL API.
+              So the overhead of the wrapper is very low.
+            </p></li><li><p>
+              A few methods perform multiple OpenGL calls for convenience.
+              For example, when compiling a shader, the wrapper not only calls the compile API,
+              but also checks for compilation errors.
+              In DEBUG mode, it will expose those errors through exceptions,
+              and it will also log any warnings to the debug console.
+            </p></li><li><p>
+              OpenGL APIs that are not tied to an OpenGL "object" are wrapped in the static <span class="code">gl</span> class.
+              For example, the OpenGL API <span class="code">glClear</span> is wrapped in the method <span class="code">gl.Clear</span>.
+              Not that, contrary to conventions, the name of this class is in lowercase.
+              This is to avoid naming conflicts and confusion with the OpenGL <span class="code">GL</span> class
+              (it is also more in line with the original OpenGL APIs, which start with a lowercase <span class="code">gl</span>).
+            </p></li><li><p>
+              When compiling with the DEBUG conditional define, every OpenGL call is checked for errors,
+              and an exception is raised when an error occurs, indicating the type of error and in which method it occurred.
+              When DEBUG is not defined, all error checking code is removed from the build so it has zero impact on performance.
+            </p></li><li><p>
+              Also, when compiling in DEBUG, warnings will be logged to the debug console
+              if you forget to bind an object before you use it
+              (or when a different object than the one you are using is currently bound).
+            </p></li><li><p>
+              The wrapper is well documented.
+              Each type and method contains documentation from the official OpenGL-ES 2.0 reference,
+              as well as custom documentation where needed.
+              The documentation also shows which original  OpenGL API call(s) are used in the implementation,
+              to make it easier to find some method if you already know the API equivalent.
+            </p></li><li><p>
+              Comes with various samples that show how to use this wrapper.
+              These samples work on Windows, iOS and Android. 
+            </p></li></ul></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Getting Started</span></div><div id="ID1RBSection" class="collapsibleSection"><p>
+          Ooogles depends on the OpenTK that comes with Xamarin for iOS and Android.
+          For Windows, to used OpenTK assembly is supplied in the Ooogles repository.
+        </p><p>
+          There aren't any templates (yet) for creating Ooogles applications.
+          For now, it is probably easiest to look at the sample applications
+          and copy their structure and modify it to meet your requirements.
+        </p></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID2RBSection" class="collapsibleSection"><h4 class="subHeading">Other Resources</h4><div class="seeAlsoStyle"><a href="d2f0578f-0e79-4cd0-840b-8fa1715f8fda.htm">Version History</a></div></div></div></div><div id="pageFooter" class="pageFooter" /></body></html>
