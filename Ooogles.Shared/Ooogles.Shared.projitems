@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>87dbffd8-9c89-40d2-aa15-4c61b2d7c064</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Ooogles.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DataBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Framebuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GLObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)glUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Renderbuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)gl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GLException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Program.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShaderException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Texture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Uniform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VertexAttribute.cs" />
+  </ItemGroup>
+</Project>

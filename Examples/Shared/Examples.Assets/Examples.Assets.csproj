@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="basemap.tga" />
+    <None Remove="lightmap.tga" />
+    <None Remove="Newton.tga" />
+    <None Remove="smoke.tga" />
+    <None Remove="texture.tga" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="basemap.tga" />
+    <EmbeddedResource Include="lightmap.tga" />
+    <EmbeddedResource Include="Newton.tga" />
+    <EmbeddedResource Include="smoke.tga" />
+    <EmbeddedResource Include="texture.tga" />
+  </ItemGroup>
+
+</Project>
